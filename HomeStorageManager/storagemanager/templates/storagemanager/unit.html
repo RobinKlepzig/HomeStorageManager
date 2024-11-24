@@ -1,0 +1,51 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+
+    <table>
+        <tr>
+            <td rowspan="2"><img src="{{unit.unit_image.url}}" width="150" height="100" class="img-fluid rounded-start"></td>
+            <td colspan="2"><h2 class="m-1">{{unit.unit_name}}</h2></td>
+        </tr>
+        <tr colspan="2">
+            <td><a class="btn btn-secondary ms-1" href="{% url 'units' %}" role="button">Back to Overview</a></td>
+            <td><a class="btn btn-outline-secondary ms-1" href="/unit/delete/{{ unit.id }}/" role="button">Delete Unit with all Objects</a></td>
+        </tr>
+    </table>
+
+<h4 class="m-4">Attributes</h4>
+<div style="width: 80%">
+<table class="table table-striped m-4">
+      <tr>
+        <th>Unit Author</th>
+        <th>Create Date</th>
+        <!--<th>Last Modified</th>-->
+      </tr>
+      <tr>
+          <td>{{unit.created_by}}</td>
+          <td>{{unit.create_date}}</td>
+          <!--<td>{{unit.lastmodified_date}}</td>-->
+      </tr>
+</table>
+    </div>
+
+<h4 class="m-4">Label</h4>
+    <form action="http://{{ HOSTNAMEANDPORT }}/qr-code/" method="post" class="m-4">
+      {% csrf_token %}
+        <input type="text" value="http://{{ HOSTNAMEANDPORT }}/unit/{{ unit.id }}" name="qr_text">
+        <input type="submit" value='Get QR-Code'>
+    </form>
+
+<h4 class="m-4">Included Objects</h4>
+<div class="list-group m-4">
+
+    {% for object in objects %}
+        <a href="/object/{{ object.id }}/" class="list-group-item list-group-item-action">{{ object.object_name }}</a>
+    {% empty %}
+        <p>No objects available yet, please attach them <a class="btn btn-outline-secondary ms-1" href="{% url 'newobject' %}" role="button">here</a></p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

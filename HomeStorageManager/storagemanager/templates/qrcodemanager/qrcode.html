@@ -1,0 +1,21 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+<script>
+  function printLabel(divId) {
+     var printContent = document.getElementById(divId).innerHTML;
+     var originalContent = document.body.innerHTML;
+     document.body.innerHTML = printContent;
+     window.print();
+     document.body.innerHTML = originalContent;
+}
+</script>
+<div id="printArea" style="border: thin solid black; padding: 10px; margin: 10px; width: 210px;">
+      <h1>{{ context.qr_image_data }}</h1>
+    {% if qr_image_base64 %}
+    <img src="data:image/png;base64,{{ qr_image_base64 }}" alt="QR Code">
+  {% endif %}
+</div>
+<input type="button" style="margin: 10px;" onclick="printLabel('printArea')" value="Print the QR-Code" />
+{% endblock %}

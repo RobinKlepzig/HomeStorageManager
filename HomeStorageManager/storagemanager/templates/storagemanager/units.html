@@ -1,0 +1,38 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+{% if user.is_authenticated %}
+
+    <table>
+        <tr>
+            <td rowspan="2"><img src="{% static 'storagemanager/boxes.svg' %}" width="150" height="100" class="img-fluid rounded-start"></td>
+            <td colspan="2"><h2 class="m-1">Units Overview</h2></td>
+        </tr>
+        <tr colspan="2">
+            <td><a class="btn btn-outline-secondary m-1" href="{% url 'newunit' %}" role="button">New Unit</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+{% for unit in latest_units_list %}
+    <div class="card mb-3 m-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{unit.unit_image.url}}" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/unit/{{ unit.id }}">{{ unit.unit_name }}</a></h5>
+              <p class="card-text"><small class="text-body-secondary">Created on {{unit.create_date}}
+                  <!--<br>Last updated {{ unit.lastmodified_date }}--><br>Created by {{ unit.created_by }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endfor %}
+{% else %}
+<p class="container-fluid exist_account_info">Already have an account? Then please <a href="{% url 'account_login' %}">login</a>, if not please <a href="{% url 'account_signup' %}">Sign-up</a>.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+
+<table>
+        <tr>
+            <td rowspan="2"><img src="{% static 'storagemanager/logo.svg' %}" width="150" height="100" class="img-fluid rounded-start"></td>
+            <td colspan="2"><h2 class="m-1">Login</h2></td>
+        </tr>
+    </table>
+
+<p class="container-fluid exist_account_info">Don't have an account? Then please <a href="{% url 'account_signup' %}">Sign-up</a>.</p>
+
+<form class="container-fluid" id="login_form" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  {% if redirect_field_value %}
+
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+
+  {% endif %}
+
+  <button  class="btn btn-secondary ms-1" type="submit">Login</button>
+
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+
+    <table>
+        <tr>
+            <td rowspan="2"><img src="{{object.object_image.url}}" width="150" height="100" class="img-fluid rounded-start"></td>
+            <td colspan="2"><h2 class="m-1">{{object.object_name}}</h2></td>
+        </tr>
+        <tr colspan="2">
+            <td><a class="btn btn-secondary ms-1" href="{% url 'objects' %}" role="button">Back to Overview</a></td>
+            <td><a class="btn btn-outline-secondary ms-1" href="/object/delete/{{ object.id }}/" role="button">Delete this Object</a></td>
+        </tr>
+    </table>
+
+<h4 class="m-4">Attributes</h4>
+<div style="width: 80%">
+<table class="table table-striped m-4">
+      <tr>
+        <th>Object Author</th>
+          <th>Quantity</th>
+          <th>Unit Name</th>
+        <th>Create Date</th>
+        <!--<th>Last Modified</th>-->
+      </tr>
+      <tr>
+          <td>{{object.created_by}}</td>
+          <td>{{object.quantity}}</td>
+          <td><a href="/unit/{{ object.unit.id }}/">{{object.unit}}</a></td>
+          <td>{{object.create_date}}</td>
+          <!--<td>{{object.lastmodified_date}}</td>-->
+      </tr>
+</table>
+    </div>
+
+<h4 class="m-4">Label</h4>
+    <form action="http://{{ HOSTNAMEANDPORT }}/qr-code/" method="post" class="m-4">
+      {% csrf_token %}
+        <input type="text" value="http://{{ HOSTNAMEANDPORT }}/object/{{ object.id }}" name="qr_text">
+        <input type="submit" value='Get QR-Code'>
+    </form>
+
+
+{% endblock %}

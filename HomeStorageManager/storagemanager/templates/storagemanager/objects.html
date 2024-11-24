@@ -1,0 +1,38 @@
+{% extends "storagemanager/base.html" %}
+
+{% block content %}
+{% load static %}
+
+    <table>
+        <tr>
+            <td rowspan="2"><img src="{% static 'storagemanager/items.svg' %}" width="150" height="100" class="img-fluid rounded-start"></td>
+            <td colspan="2"><h2 class="m-1">Objects Overview</h2></td>
+        </tr>
+        <tr colspan="2">
+            <td><a class="btn btn-outline-secondary m-1" href="{% url 'newobject' %}" role="button">New Object</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+    {% for object in latest_objects_list %}
+
+    <div class="card mb-3 m-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{object.object_image.url}}" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/object/{{ object.id }}/">{{ object.object_name }}</a></h5>
+              <p class="card-text">Quantity: {{object.quantity}}
+                  <br>Unit: <a href="/unit/{{ object.unit.id }}/">{{object.unit}}</a></p>
+              <p class="card-text"><small class="text-body-secondary">Created on {{object.create_date}}
+                  <!--<br>Last updated {{ object.lastmodified_date }}--><br>Created by {{ object.created_by }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}
