@@ -19,5 +19,5 @@ urlpatterns = [
     path("object/delete/<int:object_id>/", deleteobject, name='deleteobject'),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# support images in media folder
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
