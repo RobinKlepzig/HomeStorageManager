@@ -3,7 +3,7 @@
 {% block content %}
 
 <h2>New Object</h2>
-<form action="{% url 'newobject' %}" method="post">
+<form action="{% url 'newobject' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type='submit' value='Save' />

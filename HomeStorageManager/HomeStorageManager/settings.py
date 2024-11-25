@@ -136,6 +136,8 @@ LOGIN_REDIRECT_URL = "/units/"
 
 ACCOUNT_LOGOUT_ON_GET = 'True'
 
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
