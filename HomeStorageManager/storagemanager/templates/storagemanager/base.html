@@ -32,6 +32,12 @@
                     <li><a class="dropdown-item" href="{% url 'newobject' %}">Create Object</a></li>
                   </ul>
                 </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'admin:index' %}">Admin</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" href="/apiv1">API</a>
+                </li>
                   {% endif %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,7 +73,18 @@
                     {{ message | safe }}
                 </div>
             {% endfor %}
-        {% block content %}{% endblock %}
+
+            {% if user.is_authenticated %}
+                {% block content %}
+                {% endblock %}
+            {% else %}
+                <p class="container-fluid exist_account_info">Already have an account? Then please <a href="{% url 'account_login' %}">login</a>, if not please <a href="{% url 'account_signup' %}">Sign-up</a>.</p>
+                {% block login %}
+                {% endblock %}
+                {% block signup %}
+                {% endblock %}
+            {% endif %}
+
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
