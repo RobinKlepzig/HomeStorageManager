@@ -2,7 +2,6 @@
 
 {% block content %}
 {% load static %}
-{% if user.is_authenticated %}
 
     <table>
         <tr>
@@ -32,7 +31,4 @@
     </div>
 
 {% endfor %}
-{% else %}
-<p class="container-fluid exist_account_info">Already have an account? Then please <a href="{% url 'account_login' %}">login</a>, if not please <a href="{% url 'account_signup' %}">Sign-up</a>.</p>
-{% endif %}
 {% endblock %}

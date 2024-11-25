@@ -23,34 +23,23 @@ def unit(request, unit_id):
 
 
 def newunit(request):
-    form = UnitForm(request.POST or None)
-    #print('request method: ', request.method)
-    if form.is_valid():
-        obj = form.save(commit=False)
-        if not obj.created_by:
-            obj.created_by = request.user
-        obj.save()
-        messages.success(request, "Unit successfully created", "alert-success alert-dismissible")
-        #Object.objects.all().delete()
-    else:
-        print(form.errors)
+    form = UnitForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        if form.is_valid():
+            obj = form.save(commit=False)
+            if not obj.created_by:
+                obj.created_by = request.user
+            obj.save()
+            messages.success(request, "Unit successfully created", "alert-success alert-dismissible")
+            #Object.objects.all().delete()
+        else:
+            print(form.errors)
 
     context = {
         'form': form
     }
 
     return render(request, "storagemanager/newunit.html", context)
-
-def unituploadimage(request):
-
-    if request.method == 'POST':
-        form = UnitForm(request.POST, request.FILES)
-
-        if form.is_valid():
-            form.save()
-    else:
-        form = UnitForm()
-    return render(request, "storagemanager/newunit.html", {'form': form})
 
 
 def deleteunit(request, unit_id):
@@ -82,7 +71,7 @@ def object(request, object_id):
 
 
 def newobject(request):
-    form = ObjectForm(request.POST or None)
+    form = ObjectForm(request.POST, request.FILES)
     if request.method == 'POST':
         if form.is_valid():
             obj = form.save(commit=False)
