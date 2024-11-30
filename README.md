@@ -8,5 +8,7 @@ docker run -d --name homestoragemanger --restart=unless-stopped -p 8000:8000 -e 
 
 ### Parameter
 HOSTNAMEANDPORT: under the hostname and port where the docker container is running
+
 /hsm/media: here the images are stored locally
+
 /hsm/db: here the db are stored locally
