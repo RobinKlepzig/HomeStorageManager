@@ -12,3 +12,4 @@ HOSTNAMEANDPORT: under the hostname and port where the docker container is runni
 /hsm/media: here the images are stored locally
 
 /hsm/db: here the db are stored locally
+
