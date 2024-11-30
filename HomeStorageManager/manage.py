@@ -19,4 +19,17 @@ def main():
 
 
 if __name__ == "__main__":
+
+    # Copy initial db files if empty
+    srcdb = './db-initial/db.sqlite3'
+    dstdb = './db/'
+    cmddb = f'cp -r -n {srcdb} {dstdb}'
+    os.system(cmddb)
+
+    # Copy initial media files if empty
+    srcmedia = './media-initial/images'
+    dstmedia = './media/'
+    cmdmedia = f'cp -r -n {srcmedia} {dstmedia}'
+    os.system(cmdmedia)
+
     main()
