@@ -19,10 +19,6 @@ except KeyError:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://' + os.environ['HOSTNAMEANDPORT']
-]
-
 ALLOWED_HOSTS = ['*']
 
 
