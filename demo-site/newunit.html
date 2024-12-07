@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://10.0.0.11:8000/unit/new/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Storage Manager</title>
+        <link href="./newunit_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="http://10.0.0.11:8000/"><img src="./newunit_files/logo.svg" width="30" height="24">Home Storage Manager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                  
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="http://10.0.0.11:8000/units/">Units</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="http://10.0.0.11:8000/objects/">Objects</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="http://10.0.0.11:8000/unit/new/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="http://10.0.0.11:8000/unit/new/">Create Unit</a></li>
+                    <li><a class="dropdown-item" href="http://10.0.0.11:8000/object/new/">Create Object</a></li>
+                  </ul>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" href="http://10.0.0.11:8000/admin/">Admin</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" href="http://10.0.0.11:8000/apiv1">API</a>
+                </li>
+                  
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://10.0.0.11:8000/unit/new/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        
+                            logged on as HerbertHagebutte
+                        
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li>
+                          <a class="dropdown-item" aria-current="page" href="http://10.0.0.11:8000/accounts/logout/">Logout</a>
+                        </li>
+                        
+                    </ul>
+                  </li>
+              </ul>
+          </div>
+                </div>
+        </nav>
+        <div class="content p-4">
+            
+
+            
+                
+
+<h2>New Unit</h2>
+<form action="http://10.0.0.11:8000/unit/new/" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrfmiddlewaretoken" value="8hWw8KD5yCmnFFYPm9GuVbfb3mfObNfTWk2BnYJ1YtWHkUs9qO41y3YLOi57P4FX">
+    <ul class="errorlist"><li>This field is required.</li></ul>
+  <p>
+    <label for="id_unit_name">Unit name:</label>
+    <input type="text" name="unit_name" maxlength="128" required="" id="id_unit_name">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_unit_image">Unit image:</label>
+    <input type="file" name="unit_image" accept="image/*" id="id_unit_image">
+    
+    
+      
+    
+  </p>
+    <input type="submit" value="Save">
+</form>
+
+
+            
+
+      </div>
+    <script src="./newunit_files/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body></html>
