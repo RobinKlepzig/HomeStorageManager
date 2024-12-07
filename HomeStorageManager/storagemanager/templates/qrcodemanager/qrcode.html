@@ -12,10 +12,11 @@
 }
 </script>
 <div id="printArea" style="border: thin solid black; padding: 10px; margin: 10px; width: 210px;">
-      <h1>{{ context.qr_image_data }}</h1>
+      <h1>Home Storage Manager</h1>
     {% if qr_image_base64 %}
     <img src="data:image/png;base64,{{ qr_image_base64 }}" alt="QR Code">
   {% endif %}
+    <p>{{ HOSTNAMEANDPORT }}</p>
 </div>
 <input type="button" style="margin: 10px;" onclick="printLabel('printArea')" value="Print the QR-Code" />
 {% endblock %}
