@@ -17,7 +17,11 @@ except KeyError:
     HOSTNAMEANDPORT = '127.0.0.1:8000'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://' + os.environ['HOSTNAMEANDPORT']
+]
 
 ALLOWED_HOSTS = ['*']
 
