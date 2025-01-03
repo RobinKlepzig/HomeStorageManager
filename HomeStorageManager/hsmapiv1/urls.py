@@ -1,7 +1,11 @@
 from django.urls import include, path
 from rest_framework import routers
-
 from hsmapiv1 import views
+
+"""
+Verwendung der Funktion routers des Rest Frameworks um die
+URL Pattern zu erstellen ebenso wie das hinzufügen der Authentifizierung URLs.
+"""
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)

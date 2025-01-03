@@ -1,11 +1,11 @@
+from django.urls import path
+from storagemanager.views import units, objects, unit, object, newunit, newobject, deleteobject, deleteunit
+from django.conf import settings
+from django.conf.urls.static import static
+
 """
 URL configuration for storagemanager app.
 """
-from django.urls import path
-from storagemanager.views import units, objects, unit, object, newunit, newobject, deleteobject, deleteunit
-
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path("", units, name='home'),
@@ -19,5 +19,5 @@ urlpatterns = [
     path("object/delete/<int:object_id>/", deleteobject, name='deleteobject'),
 ]
 
-# support images in media folder
+# Routing der Bilderaufrufe zum media/ Ordners
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
