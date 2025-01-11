@@ -4,6 +4,10 @@ from .models import Unit, Object
 from .forms import UnitForm, ObjectForm
 from django.contrib import messages
 
+'''
+Der gegebene Code definiert mehrere Views für die Verwaltung von Einheiten (Units) und Objekten (Objects) innerhalb der Web-App. 
+'''
+
 
 def units(request):
     latest_units_list = Unit.objects.order_by("create_date")[:100]
@@ -31,7 +35,6 @@ def newunit(request):
                 obj.created_by = request.user
             obj.save()
             messages.success(request, "Unit successfully created", "alert-success alert-dismissible")
-            #Object.objects.all().delete()
         else:
             print(form.errors)
 

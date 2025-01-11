@@ -3,6 +3,9 @@ import qrcode
 from io import BytesIO
 import base64
 
+'''
+Generierung des QR-Codes 
+'''
 
 def printableqrcode(request):
     context = {}

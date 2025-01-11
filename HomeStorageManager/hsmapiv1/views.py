@@ -4,6 +4,10 @@ from rest_framework import permissions, viewsets
 
 from hsmapiv1.serializers import GroupSerializer, UserSerializer, UnitSerializer, ObjectSerializer
 
+'''
+API-Endpunkte für verschiedene Datenmodelle. 
+Dabei werden die Modelle User, Group, Unit und Object das ViewSet beschrieben.
+'''
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
