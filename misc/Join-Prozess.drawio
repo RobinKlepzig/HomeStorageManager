@@ -1,0 +1,130 @@
+<mxfile host="Electron" modified="2025-01-15T08:36:07.716Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.13 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="GQHLLuEbOUC2OAJ2TNS3" version="24.4.13" type="device">
+  <diagram name="Page-1" id="c7488fd3-1785-93aa-aadb-54a6760d102a">
+    <mxGraphModel dx="481" dy="346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2b4e8129b02d487f-1" value="Lifecyle Objektanlage" style="swimlane;html=1;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="1" vertex="1">
+          <mxGeometry x="180" y="70" width="460" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="2b4e8129b02d487f-2" value="Anwender" style="swimlane;html=1;startSize=20;horizontal=0;" parent="2b4e8129b02d487f-1" vertex="1">
+          <mxGeometry y="20" width="460" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="2b4e8129b02d487f-5" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="29" y="35" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2b4e8129b02d487f-7" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Aufrufen der privaten Home Storage Manager Instanz&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="144" y="26.49999999999997" width="70" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="2b4e8129b02d487f-8" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="290" y="218.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-1" value="&lt;b&gt;X&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="84" y="30" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-2" target="4wDXBtreByAz4cnLv4uV-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="154.0000000000001" y="108.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-2" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Scannen des QR-Codes mit einem mobilen Endgerät&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="64" y="89.99999999999997" width="70" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="2b4e8129b02d487f-2" source="2b4e8129b02d487f-5" target="4wDXBtreByAz4cnLv4uV-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-8" value="&lt;p style=&quot;line-height: 40%;&quot;&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;Nein&lt;/font&gt;&lt;/p&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" edge="1">
+          <mxGeometry x="-0.3333" relative="1" as="geometry">
+            <mxPoint x="114" y="45" as="sourcePoint" />
+            <mxPoint x="144" y="45" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-9" value="&lt;p style=&quot;line-height: 40%; font-size: 6px;&quot;&gt;Ja&lt;/p&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-1" target="4wDXBtreByAz4cnLv4uV-2" edge="1">
+          <mxGeometry x="-0.6" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-10" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;QR-Code liegt vor?&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="89" y="2" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-11" target="4wDXBtreByAz4cnLv4uV-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-11" value="&lt;b&gt;X&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="164" y="93" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="2b4e8129b02d487f-2" source="2b4e8129b02d487f-7" target="4wDXBtreByAz4cnLv4uV-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.344;exitY=0.034;exitDx=0;exitDy=0;exitPerimeter=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-14" target="4wDXBtreByAz4cnLv4uV-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-14" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Aufrufen des Formulars &quot;New Unit&quot; (Neue übergeordnete Einheit)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="220" y="88" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-16" target="4wDXBtreByAz4cnLv4uV-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-16" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Hinzufügen der Eigenschaften (Vergabe eines Names und optionales hochladen eines Fotos)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="273" y="25" width="106" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-22" target="4wDXBtreByAz4cnLv4uV-25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="352" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-22" value="&lt;span style=&quot;font-size: 6px;&quot;&gt;Aufrufen des Formulars &quot;New Object&quot; (Neues Objekt&lt;/span&gt;&lt;span style=&quot;font-size: 6px; background-color: initial;&quot;&gt;)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="321" y="87" width="106" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4wDXBtreByAz4cnLv4uV-25" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Hinzufügen der Eigenschaften (Vergabe eines Names, übergeordnete Einheit, Anzahl und optionales hochladen eines Fotos)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="277" y="156" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2b4e8129b02d487f-2" source="m82kytkZhXoqEk83_Is8-1" target="m82kytkZhXoqEk83_Is8-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-1" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;QR-Code am Element erzeugen&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="114" y="210" width="70" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-2" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Anbringen des QR-Codes an der Einheit oder des Objektes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="114" y="157.5" width="70" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2b4e8129b02d487f-2" source="m82kytkZhXoqEk83_Is8-5" target="m82kytkZhXoqEk83_Is8-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-5" value="&lt;b&gt;X&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="220" y="161" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="2b4e8129b02d487f-2" source="4wDXBtreByAz4cnLv4uV-25" target="m82kytkZhXoqEk83_Is8-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="2b4e8129b02d487f-2" source="m82kytkZhXoqEk83_Is8-2" target="m82kytkZhXoqEk83_Is8-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-11" value="&lt;p style=&quot;line-height: 30%;&quot;&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;Ja&lt;/font&gt;&lt;/p&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2b4e8129b02d487f-2" source="m82kytkZhXoqEk83_Is8-9" target="m82kytkZhXoqEk83_Is8-1" edge="1">
+          <mxGeometry x="0.0048" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" source="m82kytkZhXoqEk83_Is8-9" target="2b4e8129b02d487f-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-16" value="&lt;p style=&quot;line-height: 40%;&quot;&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;Nein&lt;/font&gt;&lt;/p&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="m82kytkZhXoqEk83_Is8-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.4816" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-9" value="&lt;b&gt;X&lt;/b&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="220" y="213.5" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m82kytkZhXoqEk83_Is8-15" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Werden QR-Codes benötigt?&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2b4e8129b02d487f-2" vertex="1">
+          <mxGeometry x="190" y="236.5" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
