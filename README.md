@@ -5,6 +5,9 @@ The Home Storage Manager helps you organize and keep track of your stuff at home
 > [!WARNING]  
 > The web app has not yet been tested for hosting on the Internet and extended and debug error messages are also displayed
 
+> [!CAUTION]
+> After registration, it is recommended that the user logs out and logs in again
+
 ## Basic installation
 ```
 docker run -d --name homestoragemanger --restart=unless-stopped -p 8000:8000 -e HOSTNAMEANDPORT=127.0.0.1:8000 robinklepzig/homestoragemanager:latest
